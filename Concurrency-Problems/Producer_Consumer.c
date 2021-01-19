@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
 #define MAX 10
 int fill =0 ; 
 int empty =0 ;
@@ -44,7 +43,7 @@ void* producer(void *arg) {
     }
 
  
-    return NULL;
+    return 0;
 }
 
 void* consumer(void *arg) {
@@ -60,7 +59,7 @@ void* consumer(void *arg) {
         pthread_mutex_unlock(&buffer->mutex);
     }
 
-    return NULL;
+    return 0;
 }
 
 int main(int argc, char *argv[]) {
